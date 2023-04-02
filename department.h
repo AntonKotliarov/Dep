@@ -4,6 +4,8 @@
 #include <iostream>
 #include <string>
 
+//Створення класу Department
+
 class Department
 {
 private:
@@ -36,6 +38,8 @@ public:
         HeadsWorkPhoneNumber = Other.HeadsWorkPhoneNumber;
     }
 
+//Методи Departmant
+
     std::string  GetDepartmnetName() { return DepartmantName; };
     int  GetNumOfTeachers() { return NumOfTeachers; };
     std::string  GetHeadName() { return HeadName; };
@@ -54,6 +58,8 @@ public:
     }
 
 };
+
+//Створення класу Teacher
 
 class Teacher 
 {
@@ -100,9 +106,9 @@ public:
         EmploymentDate = InEmploymentDate;
         Dep = InDep;
     }
+
+//Створення методу отримання всієї інформації про Teacher
     
-
-
     std::string GetTeacherInfo()
     {
         return Name + ":" +
@@ -123,6 +129,8 @@ public:
     {
         return Dep.GetDepartmnetInfo();
     }
+
+//Створення методу отримання всієї інформації про Teacher та Departmnet
 
     std::string GetTeacherAllInfo()
     {
