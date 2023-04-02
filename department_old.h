@@ -37,7 +37,7 @@ public:
 
 };
 
-//Створення класу Teacher
+//Створення класу Person
 
 class Person 
 {
