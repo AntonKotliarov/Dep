@@ -111,8 +111,6 @@ public:
         EmploymentDate = InEmploymentDate;
         Dep = InDep;
     }
-
-//Створення методу отримання всієї інформації про Teacher
     
     std::string GetTeacherInfo()
     {
