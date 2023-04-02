@@ -39,47 +39,74 @@ public:
 
 //Створення класу Teacher
 
-class Teacher 
+class Person 
 {
 private:
     std::string Name;
+    std::string Address; 
+    std::string HomePhoneNumber;	
+    int NumOfChildren;
+
+public:
+    Person(
+            std::string InName,
+            std::string InAddress,
+            std::string InHomePhoneNumber,
+            int InNumOfChildren
+        ) 
+    {
+        Name = InName;
+        Address = InAddress;
+        HomePhoneNumber = InHomePhoneNumber;
+        NumOfChildren = InNumOfChildren;
+    }
+    
+    std::string GetPersonInfo()
+    {
+        return Name + ":" +
+            "\n| Address=" + Address +
+            "\n| HomePhoneNumber=" + HomePhoneNumber +	
+            "\n| NumOfChildren=" + std::to_string(NumOfChildren) +"\n"
+            ;
+    }
+
+    std::string  GetName() { return Name; };
+    std::string  GetAddress() { return Address; };
+    std::string  GetHomePhoneNumber() { return HomePhoneNumber; };
+    int  GetNumOfChildren() { return NumOfChildren; };
+	
+};
+	
+
+class Teacher 
+{
+private:
     std::string Position;
     std::string Degree;
     std::string AcademicTitle;
-    std::string Address; 
-    std::string HomePhoneNumber;
     std::string WorkPhoneNumber;
     std::string MateritalState;
-    int NumOfChildren;
     int Salary;
     std::string EmploymentDate;
     Department Dep;
 
 public:
     Teacher(
-            std::string InName,
             std::string InPosition,
             std::string InDegree,
             std::string InAcademicTitle,
-            std::string InAddress,
-            std::string InHomePhoneNumber,
             std::string InWorkPhoneNumber,
             std::string InMateritalState,
-            int InNumOfChildren,
             int InSalary,
             std::string InEmploymentDate,
             Department InDep
         ) 
     {
-        Name = InName;
         Position = InPosition;
         Degree = InDegree;
         AcademicTitle = InAcademicTitle;
-        Address = InAddress;
-        HomePhoneNumber = InHomePhoneNumber;
         WorkPhoneNumber = InWorkPhoneNumber;
         MateritalState = InMateritalState;
-        NumOfChildren = InNumOfChildren;
         Salary = InSalary;
         EmploymentDate = InEmploymentDate;
         Dep = InDep;
@@ -93,11 +120,8 @@ public:
             "\n| Position=" + Position +
             "\n| Degree=" + Degree +
             "\n| AcademicTitle=" + AcademicTitle +
-            "\n| Address=" + Address +
-            "\n| HomePhoneNumber=" + HomePhoneNumber +
             "\n| WorkPhoneNumber=" + WorkPhoneNumber +
             "\n| MateritalState=" + MateritalState +
-            "\n| NumOfChildren=" + std::to_string(NumOfChildren) +
             "\n| Salary=" + std::to_string(Salary) +
             "\n| EmploymentDate=" + EmploymentDate + "\n"
             ;
@@ -108,16 +132,12 @@ public:
         return Dep.GetDepartmnetInfo();
     }
 
-    std::string  GetName() { return Name; };
     std::string  GetPosition() { return Position; };
     std::string  GetDegree() { return Degree; };
     std::string  GetAcademicTitle() { return AcademicTitle; };
-    std::string  GetAddress() { return Address; };
-    std::string  GetHomePhoneNumber() { return HomePhoneNumber; };
     std::string  GetWorkPhoneNumber() { return WorkPhoneNumber; };
     std::string  GetMateritalState() { return MateritalState; };
-    int  GetNumOfChildren() { return NumOfChildren; };
     int  GetSalary() { return Salary; };
     std::string  GetInEmploymentDate() { return EmploymentDate; };
-
+	
 };
