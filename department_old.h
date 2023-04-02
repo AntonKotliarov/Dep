@@ -108,13 +108,6 @@ public:
         return Dep.GetDepartmnetInfo();
     }
 
-//Створення методу отримання всієї інформації про Teacher та Departmnet
-
-    std::string GetTeacherAllInfo()
-    {
-        return GetTeacherInfo() + GetDepartmnetInfo();
-    }
-
     std::string  GetName() { return Name; };
     std::string  GetPosition() { return Position; };
     std::string  GetDegree() { return Degree; };
